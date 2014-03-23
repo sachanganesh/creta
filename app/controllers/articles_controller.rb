@@ -16,17 +16,18 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    find_article
   end
 
   def show # Show individual articles
-    @article = Articles.find(params[:id])
+    find_article
   end
 
   def update
   end
 
   def destroy # Delete article entry
-    @article = Articles.find(params[:id])
+    find_article
     @article.destroy
     redirect_to articles_path
   end
