@@ -1,12 +1,17 @@
 class ArticlesController < ApplicationController
+  include articles_helper
+
   def index # Show list of articles
     @articles = Articles.all
   end
 
-  def create
+  def create # Action called by New method
+    @article = Article.new(article_params)
+    @article.save
+    redirect_to article_path(@article) # Redirect to new article's Show page
   end
 
-  def new
+  def new # Make new article
     @article = Article.new
   end
 
