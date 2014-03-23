@@ -14,7 +14,7 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
-  def edit
+  def edit # Edit article
     find_article
   end
 
@@ -22,10 +22,13 @@ class ArticlesController < ApplicationController
     find_article
   end
 
-  def update
+  def update # Action called by Edit method
+    find_article
+    @article.update(article_params)
+    redirect_to article_path(@article)
   end
 
-  def destroy # Delete article entry
+  def destroy # Action calld to delete article entry
     find_article
     @article.destroy
     redirect_to articles_path
