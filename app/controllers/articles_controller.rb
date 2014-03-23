@@ -25,6 +25,9 @@ class ArticlesController < ApplicationController
   def update
   end
 
-  def destroy
+  def destroy # Delete article entry
+    @article = Articles.find(params[:id])
+    @article.destroy
+    redirect_to articles_path
   end
 end
