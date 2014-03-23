@@ -1,8 +1,7 @@
 class ArticlesController < ApplicationController
-  include articles_helper
-
+  include ArticlesHelper
   def index # Show list of articles
-    @articles = Articles.all
+    @articles = Article.all
   end
 
   def create # Action called by New method
