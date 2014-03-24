@@ -1,4 +1,5 @@
 Profoundry::Application.routes.draw do
+  devise_for :users
   get "articles/index"
   get "articles/create"
   get "articles/new"
@@ -6,9 +7,10 @@ Profoundry::Application.routes.draw do
   get "articles/show"
   get "articles/update"
   get "articles/destroy"
+  get "magazine" => "articles#magazine"
   resources :articles
 
-  root "pages#index"
+  root to: "pages#index"
   get "about" => "pages#about"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

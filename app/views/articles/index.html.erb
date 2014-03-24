@@ -3,4 +3,6 @@
 	<%= link_to article.title, article_path(article) %>
 <% end %>
 <br>
+<% if user_signed_in? %>
 <%= link_to "New Article", new_article_path %>
+<% end %>
