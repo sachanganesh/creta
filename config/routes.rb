@@ -1,4 +1,5 @@
 Profoundry::Application.routes.draw do
+  devise_for :users
   get "articles/index"
   get "articles/create"
   get "articles/new"
