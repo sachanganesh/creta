@@ -11,7 +11,6 @@ gem 'jbuilder', '~> 1.2'
 gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'devise'
 gem 'bootstrap-sass'
-gem 'rename'
 
 group :development, :test do
 	gem 'puma'
