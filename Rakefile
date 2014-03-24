@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Profoundry::Application.load_tasks
+Creta::Application.load_tasks

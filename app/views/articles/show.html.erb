@@ -4,9 +4,12 @@
 <br>
 <%= @article.body %>
 <br>
-<% if pin.user == current_user %>
+<% if @article.user == current_user %>
 <%= link_to "Edit Article", edit_article_path(@article) %> 
 <%= link_to "Delete Article", article_path(@article), method: :delete, confirm: "Are you sure you want to delete this article? #{@article.title} is a good name!" %>
 <br>
 <% end %>
 <%= link_to "All Articles", articles_path %>
+<% if !user_signed_in? %>
+  <%= render 'layouts/nonuser_prompt' %>
+<% end %>
