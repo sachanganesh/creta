@@ -1,6 +1,6 @@
 Profoundry::Application.routes.draw do
   devise_scope :user do
-    get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+    get 'sign_out' => 'devise/sessions#destroy', to: :destroy_user_session
   end
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   get "articles/index"
