@@ -14,6 +14,7 @@ gem 'omniauth-facebook'
 
 group :development, :test do
 	gem 'puma'
+	gem 'certified'
 end
 
 group :production do
