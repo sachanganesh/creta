@@ -1,4 +1,4 @@
-Profoundry::Application.routes.draw do
+Creta::Application.routes.draw do
   devise_scope :user do
     get 'sign_out' => 'devise/sessions#destroy', to: :destroy_user_session
   end
@@ -15,6 +15,7 @@ Profoundry::Application.routes.draw do
 
   root to: "pages#index"
   get "about" => "pages#about"
+  get "contact" => "pages#contact"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

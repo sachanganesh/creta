@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Profoundry::Application.config.secret_key_base = 'cd640c0d8811c8d8b4acdc94a12843fb7ef8e320f87b26548deac6e8ad67e194bdbe6a8f168a2747a806d0d2ad558ef450e1d39a06994591bc2217c18a7597c4'
+Creta::Application.config.secret_key_base = 'cd640c0d8811c8d8b4acdc94a12843fb7ef8e320f87b26548deac6e8ad67e194bdbe6a8f168a2747a806d0d2ad558ef450e1d39a06994591bc2217c18a7597c4'
