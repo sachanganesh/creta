@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
   include ArticlesHelper
   def index # Show list of articles
     @articles = Article.all
+    redirect_to gallery_path if user_signed_in?
   end
 
   def create # Action called by New method
@@ -38,7 +39,7 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
 
-  def magazine
-    @articles = Article.all
+  def gallery
+    find_user_articles
   end
 end
