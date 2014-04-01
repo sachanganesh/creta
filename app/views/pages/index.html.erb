@@ -1,4 +1,7 @@
 <h1>Welcome to Profoundry</h1>
 <%= link_to "View Articles", articles_path %>
 <br>
-<%= link_to "View Magazine", magazine_path %>
+<%= link_to "Sign In", new_user_session_path unless user_signed_in? %>
+<%= link_to "Sign Out", destroy_user_session_path, method: :delete  unless !user_signed_in? %>
+<br>
+<%= link_to "Sign Up", new_user_registration_path %>
