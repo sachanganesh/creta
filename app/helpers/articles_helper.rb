@@ -1,4 +1,5 @@
 module ArticlesHelper
+
 	protected
 		def find_article
 			@article = Article.find(params[:id])
