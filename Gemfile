@@ -18,6 +18,10 @@ group :development, :test do
 	gem "better_errors"
 end
 
+group :test do
+	gem 'rspec'
+end
+
 group :production do
 	gem 'pg'
 end
