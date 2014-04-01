@@ -1,10 +1,9 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   include ArticlesHelper
-  public
+  protected
     def index # Show list of articles
-      # redirect_to portfolio_path if user_signed_in?
-      @articles = Article.all
+      @articles = current_user.articles
     end
 
     def create # Action called by New method
@@ -38,9 +37,5 @@ class ArticlesController < ApplicationController
       @article.destroy
       flash.notice = "#{@article.title} was deleted!"
       redirect_to articles_path
-    end
-
-    def portfolio
-      @articles_list = Article.find_user_articles(current_user)
     end
 end

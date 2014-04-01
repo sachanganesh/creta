@@ -7,7 +7,6 @@ Creta::Application.routes.draw do
   get "articles/show"
   get "articles/update"
   get "articles/destroy"
-  get "articles/portfolio"
   resources :articles
 
   root to: "pages#index"
