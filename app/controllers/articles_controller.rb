@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:show]
+
   include ArticlesHelper
+
   protected
     def index # Show list of articles
       @articles = current_user.articles
