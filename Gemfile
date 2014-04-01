@@ -11,9 +11,11 @@ gem 'jbuilder', '~> 1.2'
 gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'devise'
 gem 'bootstrap-sass'
+gem "font-awesome-rails"
 
 group :development, :test do
 	gem 'puma'
+	gem "better_errors"
 end
 
 group :production do
