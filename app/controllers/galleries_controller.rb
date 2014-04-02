@@ -5,7 +5,8 @@ class GalleriesController < ApplicationController
 	end
 
 	def cogitatus # Thoughts
-		@gallery = Gallery.assign("cogitatus")
+		# @gallery = Gallery.assign("cogitatus")
+		@gallery = Gallery.find()
 		@articles = @gallery.articles
 	end
 

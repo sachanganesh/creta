@@ -11,7 +11,7 @@ Creta::Application.routes.draw do
 
   get "galleries/index"
   get "galleries/cogitatus"
-  resources :gallery
+  resources :galleries
 
   root to: "pages#index"
   get "about" => "pages#about"
