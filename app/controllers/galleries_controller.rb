@@ -6,8 +6,10 @@ class GalleriesController < ApplicationController
 
 	def cogitatus # Thoughts
 		# @gallery = Gallery.assign("cogitatus")
-		@gallery = Gallery.find()
-		@articles = @gallery.articles
+		find_by_name("cogitatus")
+		# @articles = @gallery.articles
+		@medium = GalleryMedium.new(@gallery)
+		@medium.set_articles
 	end
 
 	def politicus # Politics
@@ -37,4 +39,9 @@ class GalleriesController < ApplicationController
 	def humanitas # Humanities (Culture)
 		@gallery = Gallery.assign("humanitas")
 	end
+
+	protected
+		def find_by_name(action)
+			@gallery = Gallery.find_by(name: params[action])
+		end
 end
