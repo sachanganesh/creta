@@ -7,35 +7,19 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Gallery.delete_all
 
-cogitatus = Gallery.create!(created_at: Time.now,
-														id: 1,
-														name: "Cogitatus",
-														updated_at: Time.now)
-politicus = Gallery.create!(created_at: Time.now,
-														id: 2,
-														name: "Politicus",
-														updated_at: Time.now)
-parcus = Gallery.create!(created_at: Time.now,
-														id: 3,
-														name: "Parcus",
-														updated_at: Time.now)
-ipsum = Gallery.create!(created_at: Time.now,
-														id: 4,
-														name: "Ipsum",
-														updated_at: Time.now)
-scientia_physica = Gallery.create!(created_at: Time.now,
-														id: 1,
-														name: "Scientia Physica",
-														updated_at: Time.now)
-scientia_naturalis = Gallery.create!(created_at: Time.now,
-														id: 1,
-														name: "Scientia Naturalis",
-														updated_at: Time.now)
-proelium = Gallery.create!(created_at: Time.now,
-														id: 1,
-														name: "Proelium",
-														updated_at: Time.now)
-humanitas = Gallery.create!(created_at: Time.now,
-														id: 1,
-														name: "Humanitas",
-														updated_at: Time.now)
+cogitatus = Gallery.create!(id: 1,
+														name: "Cogitatus")
+politicus = Gallery.create!(id: 2,
+														name: "Politicus")
+parcus = Gallery.create!(id: 3,
+												 name: "Parcus")
+ipsum = Gallery.create!(id: 4,
+												name: "Ipsum")
+scientia_physica = Gallery.create!(id: 5,
+																	 name: "Scientia Physica")
+scientia_naturalis = Gallery.create!(id: 6,
+																		 name: "Scientia Naturalis")
+proelium = Gallery.create!(id: 7,
+													 name: "Proelium",)
+humanitas = Gallery.create!(id: 8,
+														name: "Humanitas")
