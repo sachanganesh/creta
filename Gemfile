@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'devise'
+gem 'simple_form'
 gem 'bootstrap-sass'
 gem "font-awesome-rails"
 
