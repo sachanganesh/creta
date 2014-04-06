@@ -1,5 +1,8 @@
 Creta::Application.routes.draw do
-  devise_for :users
+  devise_scope :user do
+    get 'sign_out' => 'devise/sessions#destroy', to: :destroy_user_session
+  end
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   get "articles/index"
   get "articles/create"
   get "articles/new"
@@ -7,8 +10,11 @@ Creta::Application.routes.draw do
   get "articles/show"
   get "articles/update"
   get "articles/destroy"
-  get "magazine" => "articles#magazine"
   resources :articles
+
+  get "galleries/index"
+  get "galleries/show"
+  resources :galleries
 
   root to: "pages#index"
   get "about" => "pages#about"

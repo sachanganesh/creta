@@ -10,12 +10,26 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'devise'
+gem 'omniauth-facebook'
 gem 'bootstrap-sass'
+<<<<<<< HEAD
 gem 'bourbon'
 
 group :development, :test do
 	gem 'puma'
 	gem 'better_errors'
+=======
+gem "font-awesome-rails"
+
+group :development, :test do
+	gem 'puma'
+	gem "better_errors"
+	gem 'binding_of_caller'
+end
+
+group :test do
+	gem 'rspec'
+>>>>>>> authentication
 end
 
 group :production do

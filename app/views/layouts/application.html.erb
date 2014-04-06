@@ -12,11 +12,8 @@
   </head>
 
   <body>
-    <div class="background"></div>
-    <%= render 'layouts/header' %>
-    <% flash.each do |name, msg| %>
-      <%= content_tag(:div, msg, class: "alert alert-info") %>
-    <% end %>
+    <%= flash.notice %>
+    <%= flash.alert %>
     <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>

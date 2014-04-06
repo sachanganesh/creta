@@ -6,7 +6,7 @@
 <br>
 <% if @article.user == current_user %>
 <%= link_to "Edit Article", edit_article_path(@article) %> 
-<%= link_to "Delete Article", article_path(@article), method: :delete, confirm: "Are you sure you want to delete this article? #{@article.title} is a good name!" %>
+<%= link_to "Delete Article", article_path(@article), method: :delete, confirm: "Are you sure you want to delete this article? #{@article.title} is a good title!" %>
 <br>
 <% end %>
 <%= link_to "All Articles", articles_path %>
