@@ -17,14 +17,11 @@ group :development, :test do
 	gem 'puma'
 	gem "better_errors"
 	gem 'binding_of_caller'
+	gem 'rspec-rails', '~> 3.0.0.beta'
 end
 
 group :test do
-	gem 'rspec'
-end
-
-group :test do
-	gem 'rspec'
+	gem 'capybara'
 end
 
 group :production do
