@@ -1,5 +1,6 @@
-<h1>Welcome to Profoundry</h1>
+<h1>Welcome to Creta</h1>
 <%= link_to "View Articles", articles_path %>
+<%= link_to "View Galleries", galleries_path %>
 <br>
 <%= link_to "Sign In", new_user_session_path unless user_signed_in? %>
 <%= link_to "Sign Out", destroy_user_session_path, method: :delete  unless !user_signed_in? %>

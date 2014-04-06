@@ -1,0 +1,4 @@
+<h1>All Galleries</h1>
+<% @galleries.each do |gallery| %>
+	<%= link_to gallery.name, gallery_path(gallery) %>
+<% end %>
