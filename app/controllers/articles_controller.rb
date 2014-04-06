@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
-  include ArticlesHelper
+  before_action :authenticate_user!, except: [:show]
+
   def index # Show list of articles
     @articles = Article.all
   end
@@ -8,8 +8,11 @@ class ArticlesController < ApplicationController
   def create # Action called by New method
     @article = current_user.articles.build(article_params)
     @article.save
-    flash.notice = "#{@article.title} was published!"
-    redirect_to article_path(@article) # Redirect to new article's Show page
+    if @article.save
+      redirect_to @article, notice: "#{@article.title} was published!" # Redirect to new article's Show page
+    else
+      render action: 'new'
+    end
   end
 
   def new # Make new article
@@ -26,19 +29,25 @@ class ArticlesController < ApplicationController
 
   def update # Action called by Edit method
     find_article
-    @article.update(article_params)
-    flash.notice = "#{@article.title} was updated!"
-    redirect_to article_path(@article)
+    if @article.update(article_params)
+      redirect to @article, notice: "#{@article.title} was updated!"
+    else 
+      render action: 'edit'
+    end
   end
 
   def destroy # Action called to delete article entry
     find_article
     @article.destroy
-    flash.notice = "#{@article.title} was deleted!"
+    flash.alert = "#{@article.title} was deleted!"
     redirect_to articles_path
   end
 
-  def magazine
-    @articles = Article.all
-  end
+    protected
+      def find_article
+        @article = Article.find(params[:id])
+      end
+      def article_params
+        params.require(:article).permit(:title, :subtitle, :body)
+      end
 end

@@ -12,10 +12,16 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'bootstrap-sass'
+gem "font-awesome-rails"
 
 group :development, :test do
 	gem 'puma'
-	gem 'certified'
+	gem "better_errors"
+	gem 'binding_of_caller'
+end
+
+group :test do
+	gem 'rspec'
 end
 
 group :production do

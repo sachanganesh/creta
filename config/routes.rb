@@ -10,8 +10,11 @@ Creta::Application.routes.draw do
   get "articles/show"
   get "articles/update"
   get "articles/destroy"
-  get "magazine" => "articles#magazine"
   resources :articles
+
+  get "galleries/index"
+  get "galleries/show"
+  resources :galleries
 
   root to: "pages#index"
   get "about" => "pages#about"
