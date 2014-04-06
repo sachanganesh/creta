@@ -10,7 +10,7 @@ Creta::Application.routes.draw do
   resources :articles
 
   get "galleries/index"
-  get "galleries/cogitatus"
+  get "galleries/show"
   resources :galleries
 
   root to: "pages#index"

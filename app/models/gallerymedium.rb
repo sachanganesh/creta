@@ -5,7 +5,7 @@ class GalleryMedium
 
 	protected
 		def set_articles
-			articles = Articles.all
-			@articles = @gallery.articles
+			@articles = Articles.all
+			@article = @gallery.@articles
 		end
 end

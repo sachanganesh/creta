@@ -4,44 +4,34 @@ class GalleriesController < ApplicationController
 		@galleries = Gallery.all
 	end
 
-	def cogitatus # Thoughts
-		# @gallery = Gallery.assign("cogitatus")
-		find_by_name("cogitatus")
-		# @articles = @gallery.articles
-		@medium = GalleryMedium.new(@gallery)
-		@medium.set_articles
-	end
+  def create
+  end
 
-	def politicus # Politics
-		@gallery = Gallery.assign("politicus")
-	end
+  def new
+  end
 
-	def parcus # Economics
-		@gallery = Gallery.assign("parcus")
-	end
-	
-	def ipsum # Computers
-		@gallery = Gallery.assign("ipsum")
-	end
-	
-	def scientia_physica # Physical sciences
-		@gallery = Gallery.assign("scientia_physica")
-	end
-	
-	def scientia_naturalis # Natural sciences
-		@gallery = Gallery.assign("scientia_naturalis")
-	end
-	
-	def proelium # Conflict
-		@gallery = Gallery.assign("proelium")
-	end
-	
-	def humanitas # Humanities (Culture)
-		@gallery = Gallery.assign("humanitas")
-	end
+  def edit
+  end
+
+  def show # Show individual galleries
+    find_gallery
+  end
+
+  def update
+  end
+
+  def destroy
+  end
 
 	protected
 		def find_by_name(action)
-			@gallery = Gallery.find_by(name: params[action])
+			Gallery.find_by(name: params[action])
+		end
+
+		def find_gallery
+			@gallery = Gallery.find(params[:id])
+		end
+
+		def find_articles
 		end
 end
