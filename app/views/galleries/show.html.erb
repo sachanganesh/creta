@@ -1,0 +1,10 @@
+<%= @gallery.name %>
+<br>
+<% @articles.each do |article| %>
+	<h3><%= link_to article.title, article_path(article) %>
+<% end %>
+<br>
+<%= link_to "All Galleries", galleries_path %>
+<% if !user_signed_in? %>
+  <%= render 'layouts/nonuser_prompt' %>
+<% end %>
