@@ -2,7 +2,6 @@
   <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:</h2>
-
       <ul>
       <% @article.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -17,7 +16,7 @@
 	<br>
 	<%= f.input :body %>
   <br>
-  <%= f.input :gallery_id, Gallery.all %>
+  <%= f.association :gallery, collection: Gallery.all(order: 'name'), value_method: :id, prompt: "Choose a Company", include_blank: false %>
 	<br>
 	<%= f.button :submit %>
 <% end %>
