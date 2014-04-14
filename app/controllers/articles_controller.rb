@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
   def update # Action called by Edit method
     find_article
     if @article.update(article_params)
-      redirect to @article, notice: "#{@article.title} was updated!"
+      redirect_to @article, notice: "#{@article.title} was updated!"
     else 
       render action: 'edit'
     end
@@ -47,7 +47,10 @@ class ArticlesController < ApplicationController
       def find_article
         @article = Article.find(params[:id])
       end
+      def determine_gallery
+        @gallery = @article.gallery
+      end
       def article_params
-        params.require(:article).permit(:title, :subtitle, :body)
+        params.require(:article).permit(:title, :subtitle, :body, :gallery_id)
       end
 end

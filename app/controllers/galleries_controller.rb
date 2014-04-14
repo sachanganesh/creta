@@ -15,6 +15,7 @@ class GalleriesController < ApplicationController
 
   def show # Show individual galleries
     find_gallery
+    find_articles
   end
 
   def update
@@ -33,5 +34,6 @@ class GalleriesController < ApplicationController
 		end
 
 		def find_articles
+      @articles = @gallery.articles
 		end
 end

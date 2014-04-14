@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:facebook]
   has_many :articles
-  validates_presence_of :name
+  validates_presence_of :name, :email, :password
 end
