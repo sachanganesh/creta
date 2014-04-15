@@ -1,15 +1,14 @@
 require 'spec_helper'
 
 describe "User" do
-	xit "can sign up" do
-		visit new_user_registration_path
-		expect(page).to have_content("Sign up")
-		fill_in "Name", with: "TestUser"
-		fill_in "Email", with: "me@sachanganesh.com"
-		fill_in "Password", with: "thisisapass"
-		fill_in "Password confirmation", with: "thisisapass"
-		click_button "Sign up"
-		expect(page).to have_content("Welcome! You have signed up successfully.")
+	xit "can register" do
+    visit new_user_registration_path
+    fill_in 'Name', :with => 'User'
+    fill_in 'Email', :with => 'usertest@example.com'
+    fill_in 'Password', :with => 'userpassword'
+    fill_in 'Password Confirmation', :with => 'userpassword'
+    click_button 'Sign up'
+    page.should have content 'Welcome'
 	end
 
 	xit "can sign in" do

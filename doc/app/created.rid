@@ -1,0 +1,14 @@
+Tue, 15 Apr 2014 10:41:13 -0700
+README.rdoc	Mon, 24 Mar 2014 14:49:17 -0700
+app/controllers/application_controller.rb	Sat, 05 Apr 2014 17:37:46 -0700
+app/controllers/articles_controller.rb	Sun, 13 Apr 2014 19:19:48 -0700
+app/controllers/galleries_controller.rb	Sun, 13 Apr 2014 19:19:48 -0700
+app/controllers/pages_controller.rb	Tue, 25 Mar 2014 19:46:34 -0700
+app/helpers/application_helper.rb	Mon, 31 Mar 2014 22:42:04 -0700
+app/helpers/articles_helper.rb	Sun, 13 Apr 2014 17:06:46 -0700
+app/helpers/galleries_helper.rb	Sat, 05 Apr 2014 17:37:46 -0700
+app/helpers/pages_helper.rb	Sun, 23 Mar 2014 09:12:10 -0700
+app/models/article.rb	Mon, 14 Apr 2014 22:25:42 -0700
+app/models/gallery.rb	Sun, 13 Apr 2014 18:58:27 -0700
+app/models/galleryid.rb	Sat, 05 Apr 2014 17:37:46 -0700
+app/models/user.rb	Mon, 14 Apr 2014 22:28:29 -0700
