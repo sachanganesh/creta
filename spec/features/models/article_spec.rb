@@ -10,7 +10,11 @@ describe Article do
 			article = Article.new(id: 1, user_id: 1, gallery_id: 1)
 			article.should_not be_valid
 		end
-		it "doesn't have a gallery_id" do
+		it "doesn't belong to a user" do
+			article = Article.new(id: 1, title: "title", gallery_id: 1)
+			article.should_not be_valid
+		end
+		it "doesn't belong to a gallery" do
 			article = Article.new(id: 1, title: "title", user_id: 1)
 			article.should_not be_valid
 		end
