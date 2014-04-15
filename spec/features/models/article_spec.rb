@@ -19,7 +19,7 @@ describe Article do
 		article = Article.new(id: 1, title: "title", user_id: 1, gallery_id: 1)
 		expect { article.save }.to change { Article.count }.by(1)
 	end
-	xit "requires authentication to write" do
+	it "requires authentication to write" do
 		visit articles_path
 		expect(page).to have_content("Sign in")
 	end
