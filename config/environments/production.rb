@@ -79,5 +79,5 @@ Creta::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Required for Heroku & Devise
-  config.action_mailer.default_url_options = { :host => 'http://sg-profoundry.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'http://creta.herokuapp.com' }
 end
