@@ -16,7 +16,7 @@
 	<br>
 	<%= f.input :body %>
   <br>
-  <%= f.association :gallery, collection: Gallery.all(order: 'name'), value_method: :id, prompt: "Choose a Company", include_blank: false %>
+  <%= f.association :gallery, collection: Gallery.all(order: 'name'), value_method: :id, prompt: "Choose a Gallery", include_blank: false %>
 	<br>
 	<%= f.button :submit %>
 <% end %>
