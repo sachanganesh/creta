@@ -1,0 +1,32 @@
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to "Creta", root_path, class: "navbar-brand" %>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse">
+      <form class="navbar-form navbar-right">
+        <% unless user_signed_in? %>
+          <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-success" %>
+          <%= link_to "Sign In", new_user_session_path, class: "btn btn-primary" %>
+        <% else %>
+          <%= link_to "Sign Out", destroy_user_session_path, class: "btn btn-primary" %>
+        <% end %>
+      </form>
+      <ul class="nav navbar-nav navbar-right Oxygen">
+        <li><%= link_to "Features", features_path %></li>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Contact", contact_path %></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<p class="text-center fire-image"><i class="fa fa-fire"></i></p>

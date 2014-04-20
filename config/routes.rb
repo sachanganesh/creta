@@ -14,6 +14,7 @@ Creta::Application.routes.draw do
   resources :galleries
 
   root to: "pages#index"
+  get "features" => "pages#features"
   get "about" => "pages#about"
   get "contact" => "pages#contact"
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,29 +1,4 @@
-<nav class="navbar navbar-inverse" role="navigation">
-  <div class="container-fluid container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <strong><%= link_to "Creta", root_path, class: "navbar-brand OpenSans" %></strong>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right Oxygen">
-        <li><a href="#">Features</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <% unless user_signed_in? %>
-          <li><button type="button" class="btn btn-success navbar-btn Oxygen" id="first_button">Sign Up</button></li>
-          <li><button type="button" class="btn btn-primary navbar-btn Oxygen">Sign In</button></li>
-        <% else %>
-          <li><button type="button" class="btn btn-default navbar-btn Oxygen">Sign Out</button></li>
-        <% end %>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+<h1 class="text-center Oxygen">Blogging done right. No more games.</h1>
+<div class="entry-options">
+	<p>Your first post is waiting to be written...</p><div class="brick"></div>
+</div>
