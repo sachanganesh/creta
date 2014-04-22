@@ -16,7 +16,20 @@
 
 @import "font-awesome"; // Icon Font
 
+p {
+	font-size: 2rem;
+}
+
 .fire-image {
 	font-size: 10rem;
+	color: #BF2424 !important;
+}
+
+.app-title {
 	color: #BF2424;
+	font-family: "Lato", "Open Sans", sans-serif;
+}
+
+.page-title {
+	padding-bottom: 3rem;
 }
