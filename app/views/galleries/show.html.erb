@@ -5,6 +5,3 @@
 <% end %>
 <br>
 <%= link_to "All Galleries", galleries_path %>
-<% if !user_signed_in? %>
-  <%= render 'layouts/nonuser_prompt' %>
-<% end %>

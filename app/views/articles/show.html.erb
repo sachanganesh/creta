@@ -12,6 +12,3 @@ Gallery: <%= @article.gallery.name %>
 <br>
 <% end %>
 <%= link_to "All Articles", articles_path %>
-<% if !user_signed_in? %>
-  <%= render 'layouts/nonuser_prompt' %>
-<% end %>
