@@ -13,6 +13,7 @@ gem 'devise'
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem "font-awesome-rails"
+gem 'mandrill-api'
 
 group :development, :test do
 	gem 'sqlite3'
