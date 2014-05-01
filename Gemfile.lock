@@ -95,6 +95,10 @@ GEM
     mandrill-api (1.0.51)
       excon (>= 0.16.0, < 1.0)
       json (>= 1.7.7, < 2.0)
+    mandrill_mailer (0.4.5)
+      actionpack
+      activesupport
+      mandrill-api (~> 1.0.9)
     mime-types (1.25.1)
     mini_portile (0.5.3)
     minitest (4.7.5)
@@ -225,6 +229,7 @@ DEPENDENCIES
   jquery-rails
   mailcatcher
   mandrill-api
+  mandrill_mailer
   pg
   puma
   rails (= 4.0.3)

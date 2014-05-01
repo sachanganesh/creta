@@ -102,3 +102,9 @@ Creta::Application.configure do
     :domain => 'creta.herokuapp.com', # your domain to identify your server when connecting
   }
 end
+
+ActionMailer::Base.delivery_method = :smtp
+
+MandrillMailer.configure do |config|
+  config.api_key = ENV['N63Jiegr5FtJtW1j51gfJw']
+end

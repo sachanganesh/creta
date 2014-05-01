@@ -13,7 +13,6 @@ gem 'devise'
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem "font-awesome-rails"
-gem 'mandrill-api'
 
 group :development, :test do
 	gem 'sqlite3'
@@ -31,6 +30,8 @@ end
 group :production do
 	gem 'pg'
 	gem 'rails_12factor'
+	gem 'mandrill-api'
+	gem 'mandrill_mailer'
 end
 
 group :doc do
