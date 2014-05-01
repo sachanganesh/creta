@@ -82,14 +82,23 @@ Creta::Application.configure do
   config.action_mailer.default_url_options = { :host => 'http://creta.herokuapp.com' }
   # ActionMailer Config
   # Setup for production - deliveries, no errors raised
-  config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.smtp_settings = {
+  #  :address   => "smtp.mandrillapp.com",
+  #  :port      => 587,
+  #  :user_name => ENV["sachan.ganesh@gmail.com"],
+  #  :password  => ENV["N63Jiegr5FtJtW1j51gfJw"]
+  #}
+  #config.action_mailer.perform_deliveries = true
+  #config.action_mailer.raise_delivery_errors = false
+  #config.action_mailer.default :charset => "utf-8"
   config.action_mailer.smtp_settings = {
     :address   => "smtp.mandrillapp.com",
-    :port      => 587,
-    :user_name => ENV["sachan.ganesh@gmail.com"],
-    :password  => ENV["N63Jiegr5FtJtW1j51gfJw"]
+    :port      => 25, # ports 587 and 2525 are also supported with STARTTLS
+    :enable_starttls_auto => true, # detects and uses STARTTLS
+    :user_name => "sachan.ganesh@gmail.com",
+    :password  => "N63Jiegr5FtJtW1j51gfJw", # SMTP password is any valid API key
+    :authentication => 'login', # Mandrill supports 'plain' or 'login'
+    :domain => 'creta.herokuapp.com', # your domain to identify your server when connecting
   }
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default :charset => "utf-8"
 end

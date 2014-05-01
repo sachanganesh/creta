@@ -63,6 +63,7 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     eventmachine (1.0.3)
+    excon (0.33.0)
     execjs (2.0.2)
     font-awesome-rails (4.0.3.1)
       railties (>= 3.2, < 5.0)
@@ -91,6 +92,9 @@ GEM
       skinny (>= 0.1.2)
       sqlite3-ruby
       thin
+    mandrill-api (1.0.51)
+      excon (>= 0.16.0, < 1.0)
+      json (>= 1.7.7, < 2.0)
     mime-types (1.25.1)
     mini_portile (0.5.3)
     minitest (4.7.5)
@@ -220,6 +224,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   mailcatcher
+  mandrill-api
   pg
   puma
   rails (= 4.0.3)
