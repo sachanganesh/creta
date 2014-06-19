@@ -86,13 +86,11 @@ Creta::Application.configure do
     :address   => "smtp.mandrill.com",
     :port      => 25, # ports 587 and 2525 are also supported with STARTTLS
     :authentication => :plain,
-    :enable_starttls_auto => true, # detects and uses STARTTLS
-    :user_name => ENV['EMAIL_NAME'],
-    :password  => ENV['EMAIL_PASS'], # SMTP password is any valid API key
-    :domain => 'heroku.com', # your domain to identify your server when connecting
+    :enable_starttls_auto => false, # detects and uses STARTTLS
+    :user_name => 'sachan.ganesh@gmail.com',
+    :password  => ENV['SMTP_PASSWORD']#,  SMTP password is any valid API key
+    #:domain => 'heroku.com', # your domain to identify your server when connecting
   }
-end
-
-MandrillMailer.configure do |config|
-  config.api_key = ENV['EMAIL_PASS']
+  
+  config.action_mailer.raise_delivery_errors = true
 end
