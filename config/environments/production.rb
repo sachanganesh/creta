@@ -79,32 +79,20 @@ Creta::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Required for Heroku & Devise
-  config.action_mailer.default_url_options = { :host => 'http://creta.herokuapp.com' }
-  # ActionMailer Config
-  # Setup for production - deliveries, no errors raised
-  #config.action_mailer.delivery_method = :smtp
-  #config.action_mailer.smtp_settings = {
-  #  :address   => "smtp.mandrillapp.com",
-  #  :port      => 587,
-  #  :user_name => ENV["sachan.ganesh@gmail.com"],
-  #  :password  => ENV["N63Jiegr5FtJtW1j51gfJw"]
-  #}
-  #config.action_mailer.perform_deliveries = true
-  #config.action_mailer.raise_delivery_errors = false
-  #config.action_mailer.default :charset => "utf-8"
+  config.action_mailer.default_url_options = { host: 'http://creta.herokuapp.com' }
+
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address   => "smtp.mandrillapp.com",
+    :address   => "smtp.mandrill.com",
     :port      => 25, # ports 587 and 2525 are also supported with STARTTLS
+    :authentication => :plain,
     :enable_starttls_auto => true, # detects and uses STARTTLS
-    :user_name => ENV["sachan.ganesh@gmail.com"],
-    :password  => ENV["N63Jiegr5FtJtW1j51gfJw"], # SMTP password is any valid API key
-    :authentication => 'login', # Mandrill supports 'plain' or 'login'
-    :domain => 'creta.herokuapp.com', # your domain to identify your server when connecting
+    :user_name => ENV['EMAIL_NAME'],
+    :password  => ENV['EMAIL_PASS'], # SMTP password is any valid API key
+    :domain => 'heroku.com', # your domain to identify your server when connecting
   }
 end
 
-ActionMailer::Base.delivery_method = :smtp
-
 MandrillMailer.configure do |config|
-  config.api_key = ENV['N63Jiegr5FtJtW1j51gfJw']
+  config.api_key = ENV['EMAIL_PASS']
 end
