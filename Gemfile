@@ -17,6 +17,7 @@ gem "font-awesome-rails"
 group :development, :test do
 	gem 'sqlite3'
 	gem 'puma'
+	gem 'dotenv-rails'
 	gem 'better_errors'
 	gem 'binding_of_caller'
 	gem 'rspec-rails', '~> 3.0.0.beta'

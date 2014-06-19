@@ -61,6 +61,11 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    dotenv (0.11.1)
+      dotenv-deployment (~> 0.0.2)
+    dotenv-deployment (0.0.2)
+    dotenv-rails (0.11.1)
+      dotenv (= 0.11.1)
     erubis (2.7.0)
     eventmachine (1.0.3)
     excon (0.33.0)
@@ -224,6 +229,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
   devise
+  dotenv-rails
   font-awesome-rails
   jbuilder (~> 1.2)
   jquery-rails
