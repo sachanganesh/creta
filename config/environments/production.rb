@@ -79,11 +79,11 @@ Creta::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Required for Heroku & Devise
-  config.action_mailer.default_url_options = { host: 'http://creta.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'smtp.mandrillapp.com' }
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address   => "smtp.mandrill.com",
+    :address   => "creta.herokuapp.com",
     :port      => 587, # ports 25 and 2525 are also supported with STARTTLS
     :authentication => 'plain',
     :enable_starttls_auto => true, # detects and uses STARTTLS
@@ -93,4 +93,5 @@ Creta::Application.configure do
   }
 
   config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
 end
