@@ -87,7 +87,7 @@ Creta::Application.configure do
     :port      => 587, # ports 25 and 2525 are also supported with STARTTLS
     #:domain => 'creta.herokuapp.com',
     :authentication => 'login',
-    :enable_starttls_auto => true, # detects and uses STARTTLS
+    #:enable_starttls_auto => true, # detects and uses STARTTLS
     :user_name => ENV['USERNAME'],
     :password  => ENV['PASSWORD']#,  SMTP password is any valid API key
     #:domain => 'heroku.com', # your domain to identify your server when connecting
