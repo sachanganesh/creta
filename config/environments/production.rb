@@ -80,10 +80,14 @@ Creta::Application.configure do
 
   # Required for Heroku & Devise
   config.action_mailer.default_url_options = { host: 'creta.herokuapp.com', :protocol => 'http' }
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
-    port: 25, # ports 587 and 2525 are also supported with STARTTLS
-    user_name: ENV['USERNAME'],
-    password: ENV['PASSWORD']#  SMTP password is any valid API key
+    :address => "smtp.mandrillapp.com",
+    :port => 587,
+    :user_name => ENV['USERNAME'],
+    :password => ENV['PASSWORD'],
+    :authentication => 'login',
+    :enable_starttls_auto => true,
+    :openssl_verify_mode  => 'none'
   }
 end
