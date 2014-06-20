@@ -22,6 +22,5 @@ module Creta
     
     # Required for Heroku & Devise
     config.assets.initialize_on_precompile = false
-    config.active_record.observers = :user_observer
   end
 end
