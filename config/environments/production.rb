@@ -83,9 +83,9 @@ Creta::Application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address   => "smtp.mandrill.com",
+    :address   => "smtp.mandrillapp.com",
     :port      => 587, # ports 25 and 2525 are also supported with STARTTLS
-    :domain => 'creta.herokuapp.com',
+    #:domain => 'creta.herokuapp.com',
     :authentication => 'plain',
     :enable_starttls_auto => true, # detects and uses STARTTLS
     :user_name => ENV['USERNAME'],
