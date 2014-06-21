@@ -40,8 +40,12 @@ h1, h2, h3, h4, h5, h6, p {
 	color: black;
 }
 
-.error ul li {
-	list-style-type: none;
+.error {
+	ul {
+		li {
+			//list-style-type: none;
+		}
+	}
 }
 
 .navbar-default .btn-link,
@@ -71,29 +75,32 @@ a.sign-out {
 }
 
 a.sign-in {
-	//color: $bluejeans-dark !important;
+	color: $bluejeans-dark !important;
 }
 
 .panel-default {
-	margin-top: 1.5rem;
+	margin-top: 3rem;
 	font-family: "Open Sans", sans-serif;
 	border: none;
 	box-shadow: none;
 	.panel-heading {
 		background-color: white;
 		.panel-title {
-			font-size: 3rem;
+			font-size: 3.5rem;
+			color: black;
 		}
 	}
 	.panel-body {
-		label {}
 		input.form-control {
-			border: none;
 			border-radius: 0;
-			border-bottom: solid black 1.5px;
 			box-shadow: none;
+			border: none;
+			border-bottom: solid black 1.5px;
+			color: black;
 			margin-bottom: 2rem;
 		}
+		.btn-main {
+			margin: 1.5rem 0 0 0;		}
 	}
 	.panel-footer {
 		background-color: white;
@@ -103,4 +110,23 @@ a.sign-in {
 			text-decoration: none;
 		}
 	}
+}
+
+.btn-main {
+	outline: none !important;
+	border: 2px solid $bluejeans-dark;
+	background-color: transparent;
+	color: $bluejeans-dark;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	font-weight: 500;
+	padding: 1rem 2rem;
+}
+.btn-main:hover,
+.btn-main:focus,
+.btn-main:active,
+.btn-main.active,
+.open > .dropdown-toggle.btn-default {
+	color: $bluejeans-dark;
+	box-shadow: none;
 }

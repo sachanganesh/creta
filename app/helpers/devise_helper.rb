@@ -5,7 +5,9 @@ module DeviseHelper
     messages = resource.errors.full_messages.map { |msg| content_tag(:li, msg) }.join
     html = <<-HTML
     <div class="alert alert-warning error">
-      #{messages}
+      <ul>
+        #{messages}
+      </ul>
     </div>
     HTML
 
