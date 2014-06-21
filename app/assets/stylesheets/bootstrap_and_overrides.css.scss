@@ -53,11 +53,14 @@ h1, h2, h3, h4, h5, h6, p {
 	color: $grapefruit-dark;
 }
 
+.navbar-default .navbar-nav > li {
+	font-family: "Oxygen", sans-serif;
+}
+
 .navbar-default .navbar-nav > li > a,
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-text {
-	font-family: "Oxygen", sans-serif;
 	color: black;
 }
 
