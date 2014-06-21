@@ -91,6 +91,9 @@ a.sign-in {
 		}
 	}
 	.panel-body {
+		input.form-control:first-child {
+			margin-top: 1rem;
+		}
 		input.form-control {
 			border-radius: 0;
 			box-shadow: none;
