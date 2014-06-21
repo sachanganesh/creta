@@ -1,20 +1,20 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 gem 'rails', '4.0.3'
+gem 'puma'
 gem 'sass-rails', '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'devise'
-gem 'simple_form'
 gem 'rails-observers'
+gem 'simple_form'
 gem 'bootstrap-sass'
 gem "font-awesome-rails"
 
 group :development, :test do
 	gem 'sqlite3'
-	gem 'puma'
 	gem 'better_errors'
 	gem 'binding_of_caller'
 	gem 'rspec-rails', '~> 3.0.0.beta'
@@ -26,7 +26,6 @@ group :test do
 end
 
 group :production do
-	gem 'unicorn'
 	gem 'pg'
 	gem 'rails_12factor'
 end
