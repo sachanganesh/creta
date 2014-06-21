@@ -91,19 +91,27 @@ a.sign-in {
 		}
 	}
 	.panel-body {
-		input.form-control:first-child {
+		.form-group:first-child {
 			margin-top: 1rem;
 		}
-		input.form-control {
-			border-radius: 0;
-			box-shadow: none;
-			border: none;
-			border-bottom: solid black 1.5px;
-			color: black;
-			margin-bottom: 2rem;
+		.form-group {
+			input.form-control {
+				border-radius: 0;
+				box-shadow: none;
+				border: none;
+				border-bottom: solid black 1.5px;
+				color: black;
+				margin-bottom: 2rem;
+			}
+			label {
+				font-family: "Open Sans", sans-serif;
+				font-weight: 100;
+				color: black;
+			}
+			.btn-main {
+				margin-top: 1rem;
+			}
 		}
-		.btn-main {
-			margin: 1.5rem 0 0 0;		}
 	}
 	.panel-footer {
 		background-color: white;
