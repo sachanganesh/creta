@@ -19,18 +19,12 @@
         <% end %>
           <li><%= link_to "Galleries", galleries_path %></li>
       </ul>
-      <form class="navbar-form navbar-right">
-        <% unless user_signed_in? %>
-          <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-success" %>
-          <%= link_to "Sign In", new_user_session_path, class: "btn btn-primary" %>
-        <% else %>
-          <%= link_to "Sign Out", destroy_user_session_path, class: "btn btn-primary", method: :delete %>
-        <% end %>
-      </form>
       <ul class="nav navbar-nav navbar-right Oxygen">
         <% unless user_signed_in? %>
-          <li><%= link_to "Features", features_path %></li>
-          <li><%= link_to "About", about_path %></li>
+          <li><%= link_to "Sign Up", new_user_registration_path, class: "sign-up" %></li>
+          <li><%= link_to "Sign In", new_user_session_path, class: "sign-in" %></li>
+        <% else %>
+          <li><%= link_to "Sign Out", new_user_session_path, class: "sign-out" %></li>
         <% end %>
           <li><%= link_to "Contact", contact_path %></li>
       </ul>
@@ -42,4 +36,3 @@
     <%= content_tag(:div, msg, class: "alert alert-info") %>
   <% end %>
 </div>
-<p class="text-center fire-image"><i class="fa fa-fire"></i></p>

@@ -2,33 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div.entry-options {
-	padding-top: 15rem;
-	margin-left: auto;
-	margin-right: auto;
-	padding-bottom: 12rem;
-}
-
-div.entry-write! {
-	padding-top: 15rem;
-	margin-left: auto;
-	margin-right: auto;
-	padding-bottom: 10rem;
-}
-
-div.entry-write! {
-	text-align: center;
-	font-size: 2.5rem;
-}
-
-div.entry-options p {
-	text-align: center;
-	font-size: 2.5rem;
-}
-
-.fa-github-square,
-.fa-github-square:hover,
-.fa-github-square:focus {
-	font-size: 4rem;
-	color: #BF2424;
+h1 {
+	font-size: 7rem;
+	font-weight: 100;
+	margin-top: 14rem;
 }
