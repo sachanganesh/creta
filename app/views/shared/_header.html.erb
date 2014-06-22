@@ -24,9 +24,9 @@
           <li><%= link_to "Sign Up", new_user_registration_path, class: "sign-up" %></li>
           <li><%= link_to "Sign In", new_user_session_path, class: "sign-in" %></li>
         <% else %>
-          <li><%= link_to "Sign Out", new_user_session_path, class: "sign-out" %></li>
+          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "sign-out" %></li>
         <% end %>
-          <li><%= link_to "Contact", contact_path %></li>
+          <li><%= link_to "GitHub", "https://github.com/Sachaniman/Creta" %></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
